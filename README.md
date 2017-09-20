@@ -1,16 +1,30 @@
 # Web Application XSS Scanner
 
-## Installation: 
+## Installation using Docker:
+For run the docker image, type the following command:
+``` sh
+docker run -i -t mercadolibre/challengexss:1.0
+```
 
-The tool works on Python 2.7 and you should have mechanize and futures installed. 
+If you need build the docker image, run the script run_development.sh:
+``` sh
+./run_development.sh
+```
+
+## Manual installation: 
+
+The tool works on Python 2.7 (2.7.13) and you should have mechanize and futures installed. 
 If not installed, type the following in the terminal:
-
-1. **pip install mechanize**
-2. **pip install futures**
+``` sh
+pip install mechanize
+pip install futures
+```
 
 or just:
 
-1. **pip install requirements.txt** 
+``` sh
+pip install requirements.txt
+```
 
 ## Description: 
 
@@ -20,11 +34,17 @@ or just:
 4) Checking every input on every page
 5) If XSS found writes vulnerabilities on DB
 
-
 ## Usage: 
 
-*_Basic:_ **XssScanner.py https://xss-game.appspot.com/level1/frame (Set the absolute url)**  
-*_Comprehensive Scan:_ **python XssScanner.py -u https://xss-game.appspot.com/level1/frame -e**  
-*_Verbose logging:_ **python XssScanner.py -u https://xss-game.appspot.com/level1/frame -v** 
-*_Cookies:_ **python XssScanner.py -u https://xss-game.appspot.com/level1/frame -c name=val name=val**
-*_Threads:_ **python XssScanner.py -u https://xss-game.appspot.com/level1/frame -t 4**
+*_Basic:_ **python2 ./XssScanner.py https://xss-game.appspot.com/level1/frame (Set the absolute url)**  
+*_Comprehensive Scan:_ **python2 ./XssScanner.py -u https://xss-game.appspot.com/level1/frame -e**  
+*_Verbose logging:_ **python2 ./XssScanner.py -u https://xss-game.appspot.com/level1/frame -v** 
+*_Cookies:_ **python2 ./XssScanner.py -u https://xss-game.appspot.com/level1/frame -c name=val name=val**
+*_Threads:_ **python2 ./XssScanner.py -u https://xss-game.appspot.com/level1/frame -t 4**
+
+## Test:
+After run the docker image, the script loads a test with the following parameters:
+
+``` sh
+python2 ./XssScanner.py -v -u https://xss-game.appspot.com/level1/frame
+```
