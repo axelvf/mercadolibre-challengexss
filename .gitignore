@@ -105,3 +105,4 @@ ENV/
 # Only for website
 .htaccess
 index.htm
+script/vulnerabilities.db
