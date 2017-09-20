@@ -37,9 +37,13 @@ pip install requirements.txt
 ## Usage: 
 
 *_Basic:_ **python2 ./XssScanner.py https://xss-game.appspot.com/level1/frame (Set the absolute url)**  
+
 *_Comprehensive Scan:_ **python2 ./XssScanner.py -u https://xss-game.appspot.com/level1/frame -e**  
+
 *_Verbose logging:_ **python2 ./XssScanner.py -u https://xss-game.appspot.com/level1/frame -v** 
+
 *_Cookies:_ **python2 ./XssScanner.py -u https://xss-game.appspot.com/level1/frame -c name=val name=val**
+
 *_Threads:_ **python2 ./XssScanner.py -u https://xss-game.appspot.com/level1/frame -t 4**
 
 ## Test:
